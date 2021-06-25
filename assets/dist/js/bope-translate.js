@@ -10,10 +10,10 @@ function chamacavera()
 	song.play();
 }
 
-
-var blocos = [];
+// /(\s+|^)*EU NAO CAI PRA BAIXO\s+\(.*\)\s+\s*/
+var blocos = [];   // /\s*EU NAO CAI PRA BAIXO\s*\(.*\)\s*/
 	blocos.push({js:"var", blocoInicial: /(\s+|^)BOTA NA CONTA DO PAPA\s+\w+/, erro: "Falha ao declarar variavel"});
-	blocos.push({js:"if", blocoInicial: /(\s+|^)*EU NAO CAI PRA\s+\(.*\)\s+BAIXO\s*/, blocoFinal: /\s*NUNCA SERAO\s*/, erro: "Falha ao declarar if"});
+	blocos.push({js:"if", blocoInicial: /(\s+|^)*EU NAO CAI PRA BAIXO\s+\(.*\)\s+\s*/, blocoFinal: /\s*NUNCA SERAO\s*/, erro: "Falha ao declarar if"});
 	blocos.push({js:"else if", blocoInicial: /(\s+|^)*PARCEIRO\(.*\)\s*/, blocoFinal: /\s*NUNCA SERAO\s*/, erro: "Falha ao declarar else if"});
 	blocos.push({js:"else", blocoInicial: /\s*EU CAI PRA CIMA\s*/, blocoFinal: /\s*NUNCA SERAO\s*/, erro: "Falha ao declarar else"}); //precisa ver as outras linhas
 	blocos.push({js:"do", blocoInicial: /\s*TEM QUE RAZER RIR\s*/, blocoFinal:/\s*QUEM QUER RIR\?\s*\(.*\)\s*/, erro: "do"}); //precisa ver as outras linhas
@@ -29,7 +29,7 @@ var blocos = [];
 
 var pattern = [];
 	pattern.push({js:'var', pattern: /(\s+|^)BOTA NA CONTA DO PAPA\s+\w+/});
-	pattern.push({js:'if (CONDICAO) {', pattern: /(\s+|^)*EU NAO CAI PRA\s+\(.*\)\s+BAIXO\s*/,});
+	pattern.push({js:'if (CONDICAO) {', pattern: /(\s+|^)*EU NAO CAI PRA BAIXO\s+\(.*\)\s+\s*/});
 	pattern.push({js:'else if (CONDICAO) {', pattern: /(\s+|^)*PARCEIRO \(.*\)\s*/});
 	pattern.push({js:'else', pattern: /\s*EU CAI PRA CIMA\s*/});
 	pattern.push({js:'do', pattern: /\s*TEM QUE RAZER RIR\s*/ });
@@ -52,7 +52,7 @@ var pattern = [];
 
 var tokens = [];
 	tokens.push({js:'var', rl:'BOTA NA CONTA DO PAPA', pattern: /(\s+|^)BOTA NA CONTA DO PAPA\s+\w+/});
-	tokens.push({js:'if', rl:'EU NAO CAI PRA BAIXO',  pattern: /(\s+|^)*EU NAO CAI PRA\s+\(.*\)\s+BAIXO\s*/,});
+	tokens.push({js:'if', rl:'EU NAO CAI PRA BAIXO',  pattern: /(\s+|^)*EU NAO CAI PRA BAIXO\s+\(.*\)\s+\s*/,});
 	tokens.push({js:'else if', rl:'PARCEIRO', pattern: /(\s+|^)*PARCEIRO \(.*\)\s*/});
 	tokens.push({js:'else', rl:'EU CAI PRA CIMA', pattern: /\s*EU CAI PRA CIMA\s*/});
 	tokens.push({js:'do', rl:'TEM QUE RAZER RIR', pattern: /\s*TEM QUE RAZER RIR\s*/ });
