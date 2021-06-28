@@ -10,8 +10,6 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
 
-    
-
     <!-- Bootstrap core CSS -->
 <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -40,14 +38,12 @@
         .textAreaWithLines textarea{width: calc(100% - 90px)!important};
       }
     </style>
-
     
     <!-- Custom styles for this template -->
     <script src="./assets/dist/js/linhasTextarea.js" type="text/javascript" ></script>
     <script src="./assets/dist/js/bope-translate.js" type="text/javascript" ></script>
   </head>
   <body class="d-flex h-100 text-center text-white bg-dark">
-    
     
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
@@ -59,7 +55,6 @@
         <a class="nav-link" href="#">Contact</a>
       </nav>
     </div> -->
-    
   </header>
 
   <main class="px-3">
@@ -67,18 +62,7 @@
     <img src="./assets/files/logo_bope.png" alt="some text" width=80 height=80>
     <p class="lead">Bem vindo à pagina oficial da primeira (até onde temos conhecimento) linguagem de programação baseada da grande história do filme Tropa de Elite! </p>
     <p class="lead">Então vista sua farda preta, coloque sua boina e vamos codificar!</p>
-    <p class="lead"><b>OBS: Para utilizar esta linguagem, é obrigatório o uso de bandoleira!</b></p>
- 
-
-    
-
-
-
-
-    
-
-
-
+    <p class="lead"><b>Obs.: Para utilizar esta linguagem, é obrigatório o uso de bandoleira!</b></p>
 
   </main>
   <div class="container">
@@ -88,18 +72,18 @@
         <div class="col-6">
             <h4>Insira seu código:</h4>
             <textarea  id="codigo" rows="10"  style=" width: 100%;">
-                BOTA NA CONTA DO PAPA x=10;
-                QUEM TAVA COM A CARGA  (y=0, y<x, y++)
-                    EU NAO CAI PRA BAIXO (y<5) {
+                BOTA NA CONTA DO PAPA x = 10;
+                QUEM TAVA COM A CARGA  (y = 0, y < x, y++) {
+                    EU NAO CAI PRA BAIXO (y < 5) {
                         alert('Y menor que 5.');
-                    PARCEIRO (y>5)
-                        alert('Y maior que 5');
-                    EU CAI PRA CIMA
-                        alert('y igual a 5');
+                    NUNCA SERAO
+                    PARCEIRO (y > 5) {
+                        alert('Y maior que 5.');
+                    NUNCA SERAO
+                    EU CAI PRA CIMA {
+                        alert('Y igual a 5.');
                     NUNCA SERAO 
-                NUNCA SERAO 
-                
-                
+                NUNCA SERAO                      
                 </textarea>	
         </div>
         <div class="col-6">
@@ -108,31 +92,113 @@
         </div>
     </div>
   
-
-
     <p class="lead">
         <button  onclick="funcaorotular()" class="btn btn-primary">Compilar</button>
       </p>
+
+    <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Declaração de variável</h3>
+                  <div class="code">
+                      <p>
+                          <span>BOTA NA CONTA DO PAPA</span> dado; <i>- variável;</i><br>
+                          <span>BOTA NA CONTA DO PAPA</span> const; <i>- constante;</i><br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>INPUT/OUTPUT</h3>
+                  <div class="code">
+                      <p>
+                          <span>HOJE EH NO AMOR</span>(); <i>- console.log();</i><br>
+                          <br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Condição</h3>
+                  <div class="code">
+                      <p>
+                          <span>EU NAO CAI PRA BAIXO</span> (condição) { <i>- if (condição) {</i><br>
+                          <span>PARCEIRO</span> (condição) { <i>- else if (condição) {</i><br>
+                          <span>EU CAI PRA CIMA</span> { <i>- else {</i><br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Laço</h3>
+                  <div class="code">
+                      <p>
+                          <span>QUEM QUER RIR</span> (condição) { <i>- while (condição) {</i><br>
+                          <span>TEM QUE FAZER RIR</span> { <i>- do {</i><br>
+                          <span>QUEM TAVA COM A CARGA</span> (condição) { <i>- for (condição) {</i><br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Break/Continue</h3>
+                  <div class="code">
+                      <p>
+                          <span>PEDE PRA SAIR</span> ; <i>- break;</i><br>
+                          <span>SABE VOAR ESTUDANTE</span> ; <i>- continue;</i><br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Switch/Case</h3>
+                  <div class="code">
+                      <p>
+                          <span>VCS ENGORDARAM O PORCO</span> (a) { <i>- switch (a) {</i><br>
+                          <span>AGORA A GENTE VAI ASSAR</span> 0: <i>- case 0:</i><br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+           <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Declarar/Chamar função</h3>
+                  <div class="code">
+                      <p>
+                          <span>MISSAO DADA</span> função() { <i>- function função() {</i><br>
+                          <span>EH MISSAO CUMPRIDA</span> função(); <i>- return função();</i><br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 tutorial-out">
+              <div class="tutorial-box">
+                  <h3>Fim de código</h3>
+                  <div class="code">
+                      <p>
+                          <span>NUNCA SERAO</span> <i>- }</i><br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+        </div>
     
-
-
 </div>
   <script type="text/javascript">
     createTextAreaWithLines('codigo');
     createTextAreaWithLines('resultado');
  </script>
   <footer class="mt-auto text-white-50">
-    <p>Inspirada na <a href="https://birl-language.github.io/" class="text-white"> Birl Language</a>, Desenvolvida por <a href="mailto:mail@mail.com" class="text-white">Gerdiãh Fernando Stelmach</a> e <a href="mailto:mateushck@gmail.com" class="text-white">Mateus Hack</a>.</p>
+    <p>Inspirada na <a href="https://birl-language.github.io/" target="_blank" class="text-white">BIRL (Bambam's "It's show time" Recursive Language)</a>, Desenvolvida por <a href="mailto:gf.stelmach@sou.faccat.br" class="text-white">Gerdiãh Fernando</a> e <a href="mailto:mateushck@gmail.com" class="text-white">Mateus Hack</a>.</p>
   </footer>
 </div>
-
-    
-
-
-
-
-    
-  </body>
-  
+   
+  </body>  
 
 </html>
