@@ -18,7 +18,6 @@ var blocos = [];
 	blocos.push({js:"do", blocoInicial: /\s*TEM QUE FAZER RIR\s*/, blocoFinal:/\s*QUEM QUER RIR\s*\(.*\)\s*/, erro: "do"}); 
 	blocos.push({js:"while", blocoInicial: /\s*QUEM QUER RIR\s*\(.*\)\s*/, blocoFinal: /\s*NUNCA SERAO\s*/, erro: "while"});
 	blocos.push({js:"for", blocoInicial: /\s*QUEM TAVA COM A CARGA\s*\(.*\)\s*/, blocoFinal: /\s*NUNCA SERAO\s*/, erro: "for"});
-	//blocos.push({js:"for in", blocoInicial: /\s*QUEM TAVA COM A CARGA\s*\(\w+\s+LEVA PRA DP\s+\w+\s*\)\s*/, erro: "for in"});
 	blocos.push({js:"break", blocoInicial: /\s*PEDE PRA SAIR\s*/, blocoFinal: /\s*;\s*/, erro: "break"});
 	blocos.push({js:"continue", blocoInicial: /\s*SABE VOAR ESTUDANTE\s*/, blocoFinal: /\s*;\s*/, erro: "continue"});
 	blocos.push({js:"switch", blocoInicial: /\s*VCS ENGORDARAM O PORCO\s+\(\w+\)\s*/, blocoFinal: /\s*NUNCA SERAO\s*/, erro: "switch"});
@@ -33,10 +32,8 @@ var pattern = [];
 	pattern.push({js:'else if (CONDICAO) {', pattern: /(\s+|^)*PARCEIRO\s+\(.*\)\s+\s*/});
 	pattern.push({js:'else {', pattern: /\s*EU CAI PRA CIMA\s*/});
 	pattern.push({js:'do', pattern: /\s*TEM QUE FAZER RIR\s*/ });
-	//pattern.push({pattern: /\s*QUEM QUER RIR\?\s*/}); 
 	pattern.push({js:'while (CONDICAO)', pattern: /\s*QUEM QUER RIR\s*\(.*\)\s*/});
 	pattern.push({js:'for (CONDICAO)', pattern: /\s*QUEM TAVA COM A CARGA\s*\(.*\)\s*/});
-	//pattern.push({js:'for (CONDICAO in CONDICAO)', pattern: /\s*QUEM TAVA COM A CARGA\s*\(\w+\s+LEVA PRA DP\s+\w+\s*\)\s*/});
 	pattern.push({js:'break', pattern: /\s*PEDE PRA SAIR\s*/});
 	pattern.push({js:'continue', pattern: /\s*SABE VOAR ESTUDANTE\s*/});
 	pattern.push({js:'switch (CONDICAO)', pattern: /\s*VCS ENGORDARAM O PORCO\s+\(\w+\)\s*/});
@@ -58,7 +55,6 @@ var tokens = [];
 	tokens.push({js:'do', rl:'TEM QUE FAZER RIR', pattern: /\s*TEM QUE FAZER RIR\s*/ });
 	tokens.push({js:'while', rl:'QUEM QUER RIR', pattern: /\s*QUEM QUER RIR\s*\(.*\)\s*/});
 	tokens.push({js:'for', rl:'QUEM TAVA COM A CARGA', pattern: /\s*QUEM TAVA COM A CARGA\s*\(.*\)\s*/});
-	//tokens.push({comp:2, js1:'for', rl1:'QUEM TAVA COM A CARGA', js2:'in', rl2:'LEVA PRA DP', pattern: /\s*QUEM TAVA COM A CARGA\s*\(\w+\s+LEVA PRA DP\s+\w+\s*\)\s*/});
 	tokens.push({js:'break', rl:'PEDE PRA SAIR', pattern: /\s*PEDE PRA SAIR\s*/});
 	tokens.push({js:'continue', rl:'SABE VOAR ESTUDANTE', pattern: /\s*SABE VOAR ESTUDANTE\s*/});
 	tokens.push({js:'switch', rl:'VCS ENGORDARAM O PORCO', pattern: /\s*VCS ENGORDARAM O PORCO\s+\(\w+\)\s*/});
@@ -91,7 +87,7 @@ function funcaorotular()
 			console.log(blocoToString(blocosVerificados[g]));
 	
 		var index = blocosVerificados.length - 1;
-		resultado += 'O bloco da linha ' + blocosVerificados[index].linha + ' não está correto';
+		resultado += 'Erro na linha: ' + blocosVerificados[index].linha;
 	}
 	
 	if(resultado == "")
