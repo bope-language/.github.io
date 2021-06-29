@@ -8,6 +8,7 @@ function chamacavera()
 	var song = new Audio();
 	song.src = './assets/files/cavera.mp3';
 	song.play();
+	
 }
 
 var blocos = [];
